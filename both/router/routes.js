@@ -19,6 +19,16 @@ Router.route('/new', {name: 'new'});
 Router.route('/returning', {name: 'returning'});
 
 Router.route('/guests/:_id', {
-  name: 'guestDone',
+  name: 'registered',
+  data: function() { return Guests.findOne(this.params._id); }
+});
+
+Router.route('/logout/:_id', {
+  name: 'logout',
+  data: function() { return Guests.findOne(this.params._id); }
+});
+
+Router.route('/login/:_id', {
+  name: 'login',
   data: function() { return Guests.findOne(this.params._id); }
 });

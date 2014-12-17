@@ -13,7 +13,7 @@ Template.New.events({
      e.preventDefault();
 
      var video = document.querySelector('#video');
-     var snap = document.querySelector('#canvas').getContext('2d').drawImage(video, 0, 0, 300, 225);
+     var pic = document.querySelector('#canvas').getContext('2d').drawImage(video, 0, 0, 300, 225);
 
      form = e.target;
 
@@ -27,9 +27,23 @@ Template.New.events({
        active: true
      }
 
+     //inserting guest in DB
      guest._id = Guests.insert(guest);
 
-     console.log(guest);
+     //sending email to employee
+     var guestEmployee = Employees.findOne({name: guest.staff});
+
+     var emailContent = 'Hi ' + guestEmployee.name + '<br> Your Guest, ' + guest.name + ' has arrived at ' + guest.startTime + ' and is waiting in the lobby.<br><img src="' + guest.photo + '"/>'; 
+
+     console.log(guestEmployee);
+
+     console.log(emailContent);
+
+     Meteor.call('sendEmail', 
+                 guestEmployee.email,
+                 'nurunconcierge@gmail.com',
+                 'NurunConcierge: Your Guest ' + guest.name + ' is here!',
+                 emailContent);
 
      Router.go('/guests/'+ guest._id , {_id: guest._id});
    }
