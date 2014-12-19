@@ -44,6 +44,7 @@ Template.Home.helpers({
 /* Home: Lifecycle Hooks */
 /*****************************************************************************/
 Template.Home.created = function () {
+  $('.dropdown-toggle').text("Admin");
 };
 
 Template.Home.rendered = function () {
