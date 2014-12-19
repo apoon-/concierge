@@ -339,7 +339,8 @@ employeesJSON = {
     {
       "staff": {
         "name": "Petula Neale",
-        "email": "Petula.Neale@nurun.com"
+        "email": "Petula.Neale@nurun.com",
+        "phone": "+14168794865"
       }
     },
     {
@@ -400,7 +401,7 @@ employeesJSON = {
       "staff": {
         "name": "Anson Poon",
         "email": "Anson.Poon@nurun.com",
-        "phone": 14168381428
+        "phone": "+14168381428"
       }
     },
     {

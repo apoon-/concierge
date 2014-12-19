@@ -44,6 +44,7 @@ Template.New.events({
        photo: canvas.toDataURL('image/png'),
        staff: $(e.target).find('.cs-selected span').html(),
        startTime: new Date(),
+       startDate: new Date().toString().slice(0, 16),
        active: true
      };
 
@@ -53,7 +54,7 @@ Template.New.events({
      //sending email to employee
      var guestEmployee = Employees.findOne({name: guest.staff});
 
-     var emailContent = 'Hi ' + guestEmployee.name + '<br> Your Guest, ' + guest.name + ' has arrived at ' + guest.startTime + ' and is waiting in the lobby.<br><img src="' + guest.photo + '"/>'; 
+     var emailContent = 'Hi ' + guestEmployee.name + '<br> Your Guest, ' + guest.name + ' has arrived at ' + guest.startTime + ' and is waiting in the lobby.<br><img src="spark.jpg"/>'; 
 
      console.log(guestEmployee);
 
@@ -64,6 +65,14 @@ Template.New.events({
                  'nurunconcierge@gmail.com',
                  'NurunConcierge: Your Guest ' + guest.name + ' is here!',
                  emailContent);
+
+     //send sms
+
+     if(guestEmployee.phone){
+      console.log('phone number found');
+      var dateStr = guest.startTime.toString();
+      Meteor.call('sendText', guest, guestEmployee, dateStr);
+     }
 
      Router.go('/guests/'+ guest._id , {_id: guest._id});
    }

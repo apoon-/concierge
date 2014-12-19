@@ -1,12 +1,27 @@
 <template name="registered">
-  <h1>Thanks for registering!</h1>
-  <h2>Name: {{name}}</h2>
-  <img src = "{{photo}}">
-  <h2>Staff: {{staff}}</h2>
-  <h2>Log In Time: {{startTime}}</h2>
-  <p> Please wait in the lobby for your staff member to come get you.</p>
-  <p>The receiptionist will have your badge ready in a moment.</p>
-  <p>Please log out when you leave the premises.</p>
-  <p>Thanks for visiting Nurun!</p>
-  <a href="/">Return to Home</a>
+  <div class="container">
+    <div class="row">
+      <div class="jumbotron">
+            <h1 class="reg-header">Thanks for registering!</h1>
+
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                <img src="../nurun.png" class="logo"/>
+              </div>
+              <img src="{{photo}}" width="298">
+              <p class="name">{{name}}</p>
+              <div class="panel-heading visitor">
+                <p>VISITOR</p>
+              </div>
+              <p class="time">{{startDate}}</p>
+            </div>
+
+            <p> Please wait in the lobby for your staff member to come get you.</p>
+            <p>The receiptionist will have your badge ready in a moment.</p>
+            <p>Please log out when you leave the premises.</p>
+            <p>Thanks for visiting Nurun!</p>
+            <a href="/" class="guest-btn">Return to Home</a>
+          </div>
+      </div>  
+    </div>
 </template>
