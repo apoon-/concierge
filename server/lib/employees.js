@@ -15,7 +15,8 @@ employeesJSON = {
     {
       "staff": {
         "name": "Amy Cape",
-        "email": "Amy.Cape@nurun.com"
+        "email": "Amy.Cape@nurun.com",
+        "phone": "+14168826104"
       }
     },
     {
@@ -75,7 +76,8 @@ employeesJSON = {
     {
       "staff": {
         "name": "Caroline Ryba",
-        "email": "Caroline.Ryba@nurun.com"
+        "email": "Caroline.Ryba@nurun.com",
+        "phone": "+16479675469"
       }
     },
     {
@@ -182,6 +184,13 @@ employeesJSON = {
     },
     {
       "staff": {
+        "name": "Gustavo Oregel",
+        "email": "gustavo.oregel@nurun.com",
+        "phone": "+16475228832"
+      }
+    },
+    {
+      "staff": {
         "name": "Hilary Jackson",
         "email": "Hilary.Jackson@nurun.com"
       }
@@ -213,7 +222,8 @@ employeesJSON = {
     {
       "staff": {
         "name": "Joe Sarkis",
-        "email": "Joe.Sarkis@nurun.com"
+        "email": "Joe.Sarkis@nurun.com",
+        "phone": "+14168300430"
       }
     },
     {
@@ -327,7 +337,8 @@ employeesJSON = {
     {
       "staff": {
         "name": "Oendrila Majumder",
-        "email": "Oendrila.Majumder@nurun.com"
+        "email": "Oendrila.Majumder@nurun.com",
+        "phone": "+14167218846"
       }
     },
     {
@@ -431,7 +442,8 @@ employeesJSON = {
     {
       "staff": {
         "name": "Derek Lo",
-        "email": "Derek.Lo@nurun.com"
+        "email": "Derek.Lo@nurun.com",
+        "phone": "+16476183118"
       }
     },
     {

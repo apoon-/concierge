@@ -72,6 +72,7 @@ Template.New.events({
       console.log('phone number found');
       var dateStr = guest.startTime.toString();
       Meteor.call('sendText', guest, guestEmployee, dateStr);
+      console.log('sms sent');
      }
 
      Router.go('/guests/'+ guest._id , {_id: guest._id});

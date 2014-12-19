@@ -6,12 +6,10 @@ Employees = new Mongo.Collection('employees');
  *  }
  */
 
-if (Meteor.isServer) {
-    Meteor.startup(function () {
-        if(Employees.find().count() === 0){
-          employeesJSON.nuruners.forEach(function(x){
-            Employees.insert(x.staff)
-          });
-        }
-    });
-}
+Meteor.startup(function () {
+    if(Employees.find().count() === 0){
+      employeesJSON.nuruners.forEach(function(x){
+        Employees.insert(x.staff)
+      });
+    }
+});

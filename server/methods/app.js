@@ -25,6 +25,8 @@ Meteor.methods({
           // http://www.twilio.com/docs/api/rest/sending-sms#example-1
           console.log(responseData.from); // outputs from number
           console.log(responseData.body); // outputs guest text
+        } else {
+          console.log(err);
         }
     });
   }
