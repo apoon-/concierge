@@ -25,6 +25,7 @@ a.guest-btn {
   text-transform: uppercase;
   font-size: 18px;
   font-weight: bold;
+  border-radius: 25px;
 }
 
 #spark {

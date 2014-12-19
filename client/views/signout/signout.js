@@ -17,14 +17,23 @@ Template.Signout.events({
       var activeGuest = Guests.findOne({name: guestName});
 
       if (activeGuest) {
-        console.log('before: ' + activeGuest);
-        activeGuest.active = false;
-        _.extend(activeGuest, {
+        console.log('name:' + activeGuest.name);
+        console.log('before: ' + activeGuest.active);
+        var updateGuest = {
+          active: false
+        }
+        _.extend(updateGuest, {
           endTime: new Date()
         })
-        console.log('after: ' + activeGuest);
+        console.log('after: ' + activeGuest.active);
 
-        Router.go('/done/'+ activeGuest._id , {_id: activeGuest._id});
+        Guests.update(activeGuest._id, {$set: updateGuest}, function(error) {
+          if (error) {
+            // display the error to the user
+          } else {
+            Router.go('/done/'+ activeGuest._id , {_id: activeGuest._id});
+          }
+        });
 
       } else {
         console.log("Guest not found");
