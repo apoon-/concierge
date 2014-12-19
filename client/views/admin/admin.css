@@ -1,3 +1,53 @@
 /*****************************************************************************/
 /* Admin: Style */
 /*****************************************************************************/
+.navbar {
+  border-radius: 0;
+}
+
+#logo {
+  width: 40px;
+}
+
+.title {
+  float: left;
+  color: black;
+  font-size: 20px;
+  margin-top: 12px;
+}
+
+.admin {
+  margin-top: 100px;
+}
+
+.admin .panel {
+  padding: 0;
+  border-radius: 0;
+}
+
+.admin .panel-title {
+  text-transform: uppercase;
+}
+
+.admin .panel-body {
+  font-size: 12px;
+}
+
+.guest-item {
+  color: black;
+}
+
+.admin .panel-heading {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+.admin .btn-group {
+  float: right;
+}
+
+.admin .panel-content {
+  padding: 5px;
+}

@@ -54,7 +54,7 @@ Template.New.events({
      //sending email to employee
      var guestEmployee = Employees.findOne({name: guest.staff});
 
-     var emailContent = 'Hi ' + guestEmployee.name + '<br> Your Guest, ' + guest.name + ' has arrived at ' + guest.startTime + ' and is waiting in the lobby.<br><img src="spark.jpg"/>'; 
+     var emailContent = 'Hi ' + guestEmployee.name + '<br> Your Guest, ' + guest.name + ' has arrived at ' + guest.startTime + ' and is waiting in the lobby.<br>'; 
 
      console.log(guestEmployee);
 

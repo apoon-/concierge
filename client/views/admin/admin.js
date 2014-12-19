@@ -17,6 +17,12 @@ Template.Admin.helpers({
    *    return Items.find();
    *  }
    */
+   activeGuests: function(){
+    return Guests.find({active: true}).fetch();
+   },
+   inactiveGuests: function(){
+    return Guests.find({active: false}).fetch();
+   }
 });
 
 /*****************************************************************************/

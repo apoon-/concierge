@@ -26,6 +26,13 @@ a.guest-btn {
   font-size: 18px;
   font-weight: bold;
   border-radius: 25px;
+  -webkit-transition: background-color 700ms ease-out;
+}
+
+a.guest-btn:hover {
+  background-color: #006D37;
+  -webkit-transition: background-color 700ms ease-out;
+  text-decoration: none;
 }
 
 #spark {

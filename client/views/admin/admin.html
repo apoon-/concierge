@@ -1,3 +1,56 @@
 <template name="Admin">
-  client/views/admin/admin.html
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+          <img alt="nurun" src="../spark.jpg" id="logo">
+        </a>
+        <p class="title text-center">Admin Panel</p>
+      </div>
+    </div>
+  </nav>
+  <div class="container admin">
+    <div class="row">
+      <div class="panel panel-danger col-md-6">
+        <div class="panel-heading">
+          Active Guests
+        </div>
+        {{#each activeGuests}}
+          <div class="panel panel-default guest-item">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{name}}</h3>
+            </div>
+            <div class="panel-body">
+              Checked in at: {{startTime}}
+              <div class="btn-group" role="group" aria-label="Default button group">
+                <button type="button" class="btn btn-default">Edit</button>
+                <button type="button" class="btn btn-default">Delete</button>
+                <button type="button" class="btn btn-default">Print</button>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+      <div class="panel panel-success col-md-6">
+        <div class="panel-heading">
+          Inactive Guests
+        </div>
+        {{#each inactiveGuests}}
+          <div class="panel panel-default guest-item">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{name}}</h3>
+            </div>
+            <div class="panel-body">
+              Checked out at: {{endTime}}
+              <div class="btn-group" role="group" aria-label="Default button group">
+                <button type="button" class="btn btn-default">Edit</button>
+                <button type="button" class="btn btn-default">Delete</button>
+                <button type="button" class="btn btn-default">Print</button>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
 </template>

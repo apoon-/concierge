@@ -1,3 +1,7 @@
+.jumbotron {
+  padding-top: 30px;
+}
+
 .jumbotron .reg-header {
   text-align: center;
   color: rgb(51, 51, 51);
@@ -8,7 +12,13 @@
 .jumbotron .guest-btn {
   border: 3px solid black;
   color: black;
-  margin-top: 30px;
+  margin-top: 20px;
+  -webkit-transition: background-color 700ms ease-out;
+}
+
+.jumbotron .guest-btn:hover {
+  background-color: #8E8F91 !important;
+  -webkit-transition: background-color 700ms ease-out;
 }
 
 .jumbotron .panel {
