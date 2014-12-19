@@ -20,15 +20,23 @@ Template.Home.helpers({
    */
 
    isAdmin: function(){
-    var adminEmail = Meteor.user().emails[0].address;
-      if(adminEmail === "admin@nurun.com"){
-        console.log("hi");
-        return true
-      } else {
-        console.log("nope");
-        return false
-        //add some logic for displaying error template.
-      }
+    var user = Meteor.user();
+    if (user && user.emails) {
+      var adminEmail = Meteor.user().emails[0].address;
+        if(adminEmail === "admin@nurun.com"){
+          console.log("hi");
+          return true
+        } else {
+          console.log("nope");
+          return false
+          //add some logic for displaying error template.
+        }
+    }
+   },
+
+   adminOverride: function(){
+    console.log("admin override");
+    $('.dropdown-toggle').text("Admin");
    }
 });
 

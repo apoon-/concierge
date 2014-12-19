@@ -18,6 +18,8 @@ Router.route('/new', {name: 'new'});
 
 Router.route('/signout', {name: 'signout'});
 
+Router.route('/admin', {name: 'admin'});
+
 Router.route('/guests/:_id', {
   name: 'registered',
   data: function() { return Guests.findOne(this.params._id); }

@@ -1,8 +1,9 @@
 <template name="Home">
   {{> loginButtons align="right"}}
-  {{#if isAdmin}}<a href="/admin">Admin Panel</a>{{/if}}
   <h1 class="welcome">Welcome to Nurun!</h1>
   <img src="spark.jpg" id="spark"/>
   <a href="/new" class="guest-btn">Please Sign In</a>
   <a href="/signout" class="guest-btn">Sign Out</a>
+  {{#if isAdmin}}<a href="/admin" class="guest-btn">Admin Panel</a>{{/if}}
+  {{adminOverride}}
 </template>

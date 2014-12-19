@@ -399,7 +399,8 @@ employeesJSON = {
     {
       "staff": {
         "name": "Anson Poon",
-        "email": "Anson.Poon@nurun.com"
+        "email": "Anson.Poon@nurun.com",
+        "phone": 14168381428
       }
     },
     {
