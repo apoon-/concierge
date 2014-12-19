@@ -13,11 +13,7 @@ Template.New.events({
      e.preventDefault();
 
      var video = document.querySelector('#video');
-     var pic = document.querySelector('#canvas').getContext('2d').drawImage(video, 0, 0, 300, 225);
-
-     form = e.target;
-
-     console.log(form);
+     var pic = document.querySelector('#canvas').getContext('2d').drawImage(video, 0, 0, 300, 230);
 
      var guest = {
        name: $(e.target).find('[name=q1]').val(),
@@ -93,7 +89,7 @@ Template.New.rendered = function () {
     canvas = document.querySelector('#canvas'),
     ctx = canvas.getContext('2d'),
     width = 300,
-    height = 225;
+    height = 230;
 
     canvas.width = width;
     canvas.height = height;

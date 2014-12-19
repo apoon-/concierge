@@ -1,0 +1,16 @@
+/*****************************************************************************/
+/* Signout: Style */
+/*****************************************************************************/
+
+.fs-form-overview .fs-fields::before {
+  content: "CONFIRM & SIGN OUT";
+}
+
+.fs-dot-current {
+  display: none;
+}
+
+.fs-form-overview .fs-fields input {
+  font-size: 3em;
+  text-align: center;
+}
