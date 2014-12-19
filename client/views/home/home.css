@@ -38,3 +38,7 @@ a.guest-btn {
   text-align: center;
   font-size: 45px;
 }
+
+#login-dropdown-list {
+  padding: 10px 0 0 10px;
+}

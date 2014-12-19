@@ -54,6 +54,7 @@
 	background: #EFF0F2;
 	color: #3b3f45;
 	font-size: 1.2em;
+	z-index: 1;
 }
 
 .fs-form-overview .fs-fields::before {

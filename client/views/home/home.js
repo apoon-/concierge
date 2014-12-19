@@ -8,6 +8,7 @@ Template.Home.events({
    *
    *  }
    */
+
 });
 
 Template.Home.helpers({
@@ -17,6 +18,18 @@ Template.Home.helpers({
    *    return Items.find();
    *  }
    */
+
+   isAdmin: function(){
+    var adminEmail = Meteor.user().emails[0].address;
+      if(adminEmail === "admin@nurun.com"){
+        console.log("hi");
+        return true
+      } else {
+        console.log("nope");
+        return false
+        //add some logic for displaying error template.
+      }
+   }
 });
 
 /*****************************************************************************/
@@ -26,6 +39,7 @@ Template.Home.created = function () {
 };
 
 Template.Home.rendered = function () {
+  $('.dropdown-toggle').text("Admin");
 };
 
 Template.Home.destroyed = function () {
