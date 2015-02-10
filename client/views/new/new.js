@@ -101,7 +101,7 @@ Template.New.rendered = function () {
 
   (function() {
     var formWrap = document.getElementById( 'fs-form-wrap' );
-
+    console.log("new guest form called");
     [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
       new SelectFx( el, {
         stickyPlaceholder: false,
